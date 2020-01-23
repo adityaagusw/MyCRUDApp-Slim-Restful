@@ -12,12 +12,12 @@ $app = new \Slim\App([
     ]
 ]);
 
-// $app->add(new Tuupola\Middleware\HttpBasicAuthentication([
-//     "secure"=>false,
-//     "users" => [
-//         "adityaagusw" => "050398",
-//     ]
-// ]));
+$app->add(new Tuupola\Middleware\HttpBasicAuthentication([
+    "secure"=>false,
+    "users" => [
+        "adityaagusw" => "050398",
+    ]
+]));
 
 $app->post('/membuatuser', function(Request $request, Response $response){
 
